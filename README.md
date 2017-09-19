@@ -7,7 +7,7 @@ In the first step it setup the base for a simple map
 component that displays a tile based map with different
 layers and some basic interactions with a hosted application
 
-##Requirements (first draft)
+## Requirements (first draft)
 * Display a auto resizeable map in HTML/Angular4 application
 * map consists of one tile base layer (for instance OSM)
 * map can contain one or more additional layers from GeoJSON or WFS sources
@@ -25,7 +25,7 @@ layers and some basic interactions with a hosted application
 * the component can display additional copyright information 
 
 
-##Non Scope
+## Non Scope
 * The component doesn't provide own gis sources
 * The component doesn't handle problems related to cross domain access
 * Switchable base layer can be implemented later
