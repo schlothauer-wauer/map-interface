@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scsbase:Device
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:scsbase="http://www.swarco.com/scs/base/1.1.0"
+    xsi:schemaLocation="http://www.swarco.com/scs/base/1.1.0 scsbase.ecore"
+    guid="75894375897439857384975984379">
+  <locations
+      xsi:type="scsbase:LocationPoint"
+      longitude="40.0"
+      latitude="50.0"/>
+  <deviceInfo
+      deviceType="TRAFFIC_LIGHT_CONTROLLER"
+      manufacturer="SWARCO"
+      designation="ACTROS"
+      version="1.3"/>
+</scsbase:Device>
