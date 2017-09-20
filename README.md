@@ -59,3 +59,6 @@ to wrap concrete implementations in a transparent way for the application that u
 6. ... next steps to extend the component functionality
 
 ## Basic component interface
+![Basic class design](htts://www.plantuml.com/plantuml/png/5Or93eKm34FtdE9p09ezAwwIdmPQgPCoYElJRcm_sP8lDHJpMhOzDoeUsQNyajdG4q3m3K-sv7zN5khDk5cWNa4fbMu9dULubqB5SUGva1k99-cC43lfQi9O5nUtEFq3)
+
+[Diagram source](docs/map.puml) (main structure)
