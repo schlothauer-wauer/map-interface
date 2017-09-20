@@ -63,7 +63,7 @@ to wrap concrete implementations in a transparent way for the application that u
 [Diagram source](docs/map.puml)
 
 ## Basic data model for map component
-![Basic data model](http://www.plantuml.com/plantuml/png/5Or93eKm34FtdE9p09ezAwwIdmPQgPCoYElJRcm_sP8lDHJpMhOzDoeUsQNyajdG4q3m3K-sv7zN5khDk5cWNa4fbMu9dULubqB5SUGva1k99-cC43lfQi9O5nUtEFq3)
+![Basic data model](http://www.plantuml.com/plantuml/png/5Or12iCm30JlVKNwW5ZtdlAJebfgR90j8qla-t4kkxCmiCTqD8ychtVjMO8uJBRYFkO7mF1AP_KIlvXiMRjpzvIrmSn5r0i6stuz2Gt7NfTWVyoyrbm8I5IzQaS1ugRVfiIInlDtSAVLDm00)
 
 The design based on interfaces and the idea to provide separate attribute entry points for different topics.
 The fact that only two types are marked as interface is related to their importance as "entry points".
