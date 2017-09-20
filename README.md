@@ -12,7 +12,6 @@ layers and some basic interactions with a hosted application
 * Display a auto resizeable map in HTML/Angular4 application
 * map consists of one tile base layer (for instance OSM)
 * the component provides a layer selection dialog
-  - ~ ~map server should be selectable from a list of provided ones~ ~
   - map can contain one or more additional layers from GeoJSON or WFS sources
   - map can contain custom dynamic layers with application owned object
   - the visibility of layers in the layer dialog is configurable by hosted application
@@ -45,7 +44,7 @@ layers and some basic interactions with a hosted application
 * The component doesn't handle problems related to cross domain access
 * Switchable base layer can be implemented later
 
-## Note: 
+## Note
 Today some of us are using leaflet.js which enables a lot of the requirements out of the box. 
 It should be a good starting point for a base implementation but one of the goals of the project is
 to wrap concrete implementations in a transparent way for the application that uses the component.
@@ -61,4 +60,12 @@ to wrap concrete implementations in a transparent way for the application that u
 ## Basic component interface
 ![Basic component interface](http://www.plantuml.com/plantuml/png/5Or93eKm34FtdE9p09ezAwwIdmPQgPCoYElJRcm_sP8lDHJpMhOzDoeUsQNyajdG4q3m3K-sv7zN5khDk5cWNa4fbMu9dULubqB5SUGva1k99-cC43lfQi9O5nUtEFq3)
 
-[Diagram source](docs/map.puml) (main structure)
+[Diagram source](docs/map.puml)
+
+## Basic data model for map component
+![Basic data model](http://www.plantuml.com/plantuml/png/5Or93eKm34FtdE9p09ezAwwIdmPQgPCoYElJRcm_sP8lDHJpMhOzDoeUsQNyajdG4q3m3K-sv7zN5khDk5cWNa4fbMu9dULubqB5SUGva1k99-cC43lfQi9O5nUtEFq3)
+
+The design based on interfaces and the idea to provide separate attribute entry points for different topics.
+The fact that only two types are marked as interface is related to their importance as "entry points".
+
+[Diagram source](additional/demo_model.puml) (main structure)

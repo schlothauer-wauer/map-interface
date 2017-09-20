@@ -1,0 +1,98 @@
+@startuml
+class GeoPoint {
+    lon: double
+    lat: double
+    projection: string
+}
+
+class GeoArea {
+    projection: string
+    points: GeoPoint[]
+}
+
+class GeoMultiLine {
+    projection: string
+    points: GeoPoint[]
+}
+
+class GeoRect {
+    upperLeft: GeoPoint
+    lowerRight: GeoPoint
+}
+
+class GeoObjectBase {
+    center: GeoPoint
+    area: GeoArea
+    route: GeoMultiLine
+}
+
+
+interface GeoObject {
+    gis: GeoObjectBase
+}
+
+class MapObjectBase {
+    radius: int
+    fillColor: string
+    strokeColor: string
+    strokeStyle: [solid|doted|...]
+    strokeWidth: int
+    icon: IconType
+    caption: CaptionType
+}
+
+
+interface MapObject {
+    gis: GeoObjectBase
+    display: MapObjectBase
+}
+
+MapObject --|> GeoObject:implements
+
+note right of MapObject
+This object can be direct
+displayed on a map.
+If an application object
+should be displayed without
+any transformation it should
+additional implement MapObject
+end note
+
+MapObject *-- MapObjectBase
+GeoObject *-- GeoObjectBase
+
+GeoObjectBase o-- GeoPoint
+GeoObjectBase o-- GeoMultiLine
+GeoObjectBase o-- GeoArea
+
+class Device {
+    gis: GeoObjectBase
+}
+
+class Junction {
+  gis: GeoObjectBase
+}
+
+class Pole {
+  gis: GeoObjectBase
+}
+
+class Umleitungsroute {
+  gis: GeoObjectBase
+}
+
+Device --|> GeoObject: implements
+Junction --|> GeoObject: implements
+Pole --|> GeoObject: implements
+Umleitungsroute --|> GeoObject: implements
+
+
+note "concrete examples for map displayable application objects" as example
+
+Device .up. example
+Junction .up. example
+Pole .up. example
+Umleitungsroute .up. example
+
+
+@enduml
