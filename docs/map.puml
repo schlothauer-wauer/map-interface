@@ -1,0 +1,39 @@
+@startuml
+
+class BaseLayer {
+    projection: String
+}
+
+class TileLayer extends BaseLayer {
+    String url
+}
+
+class GeoPoint {
+    lat: Double
+    lon: Double
+    projection: String
+}
+
+class GeoRect {
+    GeoPoint upperLeft
+    GeoPoint lowerRight
+}
+
+interface MapComponent {
+    void setBaseLayer(BaseLayer layer);
+    void setCenter(GeoPoint);
+    void zoomToPoint(GeoPoint point, int zoom);
+    void zoomToRect(GeoRect rest);
+}
+
+note top of MapComponent
+That are the first
+basic functions for
+first integrated prototypes.
+
+Later additional functions
+will follow, but always defined
+stuff should fixed
+end note
+
+@enduml
